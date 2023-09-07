@@ -14,9 +14,10 @@ enum DayType {
 }
 
 function isWeekend(day: DayType) {
-	if (day === 'weekend') {
-		return true;
-	} else {
-		return false;
+	switch (day) {
+		case 'weekday':
+			return false;
+		case 'weekend':
+			return true;
 	}
 }
