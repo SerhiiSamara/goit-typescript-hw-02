@@ -4,20 +4,15 @@
 */
 
 enum DayType {
-	MONDAY = 'weekday',
-	TUESDAY = 'weekday',
-	WEDNESDAY = 'weekday',
-	THURSDAY = 'weekday',
-	FRIDAY = 'weekday',
-	SATURDAY = 'weekend',
-	SUNDAY = 'weekend',
+	MONDAY,
+	TUESDAY,
+	WEDNESDAY,
+	THURSDAY,
+	FRIDAY,
+	SATURDAY,
+	SUNDAY,
 }
 
-function isWeekend(day: DayType) {
-	switch (day) {
-		case 'weekday':
-			return false;
-		case 'weekend':
-			return true;
-	}
+function isWeekend(day: DayType): boolean {
+	return day === DayType.SATURDAY || day === DayType.SUNDAY
 }
